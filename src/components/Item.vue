@@ -65,47 +65,49 @@
     }
 </script>
 
-<style>
-    .item .head {
-        padding: 0 10px;
-    }
-    .item .title {
-        font-size: xx-large;
-        float: left;
-        width: fit-content;
-        max-width: 60%;
-        white-space: nowrap;
-        overflow: hidden;
-        margin: 10px 0 0 0;
-    }
-    .item .size {
-        color: darkgrey;
-        float: left;
-        margin-top: 27px;
-        margin-left: 20px;
-    }
-    .item .tool {
-        float: right;
-        margin: 30px 0 0 10px;
-    }
-    .item .tool a {
-        cursor: pointer;
-    }
-    .item .item {
-        color: #4f4f4f;
-        padding: 10px 0 20px 10px;
-    }
-    .item .item h4 {
-        width: fit-content;
-        float: left;
-        margin: 0;
-    }
-    .item .item p {
-        margin: 0 0 0 15px;
-        float: left;
-    }
+<style lang="less">
+    .item {
+        .head {
+            padding: 0 10px;
+        }
+        .title {
+            font-size: xx-large;
+            float: left;
+            width: fit-content;
+            max-width: 60%;
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 10px 0 0 0;
+        }
+        .size {
+            color: darkgrey;
+            float: left;
+            margin-top: 27px;
+            margin-left: 20px;
+        }
+        .tool {
+            float: right;
+            margin: 30px 0 0 10px;
+        }
+        .tool a {
+            cursor: pointer;
+        }
+        .item {
+            color: #4f4f4f;
+            padding: 10px 0 20px 10px;
+            h4 {
+                width: fit-content;
+                float: left;
+                margin: 0;
+            }
+            p {
+                margin: 0 0 0 15px;
+                float: left;
+            }
+        }
 
-    .item .table-link {
-        color: #337ab7
+        .table-link {
+            color: #337ab7
+        }
     }
 </style>

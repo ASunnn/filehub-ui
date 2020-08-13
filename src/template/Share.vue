@@ -78,21 +78,10 @@
 
             open: function(row, column, event) {
                 this.$router.push(path + "/s/" + row.id);
-                // window.location.href = "/s/" + row.id;
             }
         }
     }
 </script>
 
 <style>
-    .blank {
-        width: 100%;
-        height: 50vh;
-    }
-
-    .no-data {
-        font-size: large;
-        margin: 20px;
-        color: #303133;
-    }
 </style>

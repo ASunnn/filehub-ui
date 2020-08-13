@@ -1,8 +1,8 @@
 <template>
-    <el-container>
+    <el-container class="s">
         <el-col :md="{span: 20, offset: 2}" :sm="24">
             <el-header>
-                <el-menu mode="horizontal">
+                <el-menu mode="horizontal" default-active="1">
                     <el-menu-item index="1">FileHub</el-menu-item>
                 </el-menu>
             </el-header>
@@ -123,19 +123,16 @@
     }
 </script>
 
-<style>
-    .blank {
-        width: 100%;
-        height: 50vh;
-    }
+<style lang="less">
+    .s {
+        .el-menu-item {
+            font-size: large;
+            cursor: default;
+        }
 
-    .el-menu-item {
-        font-size: large;
-         cursor: default;
-    }
-
-    .el-menu--horizontal>.el-menu-item.is-active {
-         border-bottom: none;
-        color: #303133;
+        .el-menu--horizontal>.el-menu-item.is-active {
+            border-bottom: none;
+            color: #303133;
+        }
     }
 </style>

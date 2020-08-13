@@ -142,7 +142,7 @@
     }
 </script>
 
-<style>
+<style lang="less">
     .el-upload {
         width: 100%;
     }
@@ -152,29 +152,26 @@
         height: 100px;
     }
 
-    .upload-tip {
-        font-size: 20px;
-        margin-top: 10px;
-        color: #777;
-    }
-
     .v-modal {
         opacity: 0.3;
     }
+
     .el-dialog__header {
          padding: 0;
     }
+
     .el-dialog__body {
         padding: 15px 15px 0 15px;
+        .dialog_divider {
+            margin: 15px 0 0 0;
+        }
     }
-    .el-dialog__body .dialog_divider {
-        margin: 15px 0 0 0;
-    }
+
     .el-dialog__footer {
         padding: 5px 0;
-    }
-    .el-dialog__footer .dialog_button {
-        margin: 4px 12px 4px 0;
-        padding: 6px 12px;
+        .dialog_button {
+            margin: 4px 12px 4px 0;
+            padding: 6px 12px;
+        }
     }
 </style>

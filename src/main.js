@@ -40,7 +40,7 @@ const router = new VueRouter({
             name: "list",
             component: List
         }, {
-            path: path + "/copy",
+            path: path + "/share",
             name: "share",
             component: Share
         }]

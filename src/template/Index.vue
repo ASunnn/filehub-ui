@@ -5,7 +5,7 @@
                 <el-menu mode="horizontal">
                     <el-menu-item index="1"><router-link class="menu-title" to="/filehub/">FileHub</router-link></el-menu-item>
                     <el-menu-item index="2"><router-link class="menu-item" to="/filehub/list">list</router-link></el-menu-item>
-                    <el-menu-item index="3"><router-link class="menu-item" to="/filehub/copy">share</router-link></el-menu-item>
+                    <el-menu-item index="3"><router-link class="menu-item" to="/filehub/share">share</router-link></el-menu-item>
                 </el-menu>
             </el-header>
             <el-main>
@@ -22,14 +22,12 @@
     }
 </script>
 
-<style>
-    .menu-title {
-        text-decoration: none;
-        font-size: large;
+<style lang="less">
+    .el-menu-item {
+        transition: none;
     }
 
-    .menu-item {
-        text-decoration: none;
-        font-size: medium;
+    .el-menu--horizontal>.el-menu-item.is-active {
+         border-bottom: none;
     }
 </style>

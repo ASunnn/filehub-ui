@@ -1,7 +1,7 @@
 <template>
     <div>
         <el-col class="login" :sm="{span: 8, offset: 8}" :xs="{span: 16, offset: 4}">
-            <el-input v-model="passCode" @keyup.enter="login" :disabled="disable">
+            <el-input type="password" v-model="passCode" @keyup.enter.native="login" :disabled="disable">
                 <el-button slot="append" icon="el-icon-arrow-right" @click="login"></el-button>
             </el-input>
         </el-col>
@@ -57,7 +57,4 @@
 </script>
 
 <style>
-    .login {
-        margin-top: 40vh;
-    }
 </style>

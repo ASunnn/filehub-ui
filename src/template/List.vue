@@ -39,7 +39,7 @@
             <item :data="commit" :tool="true" @on-share="onShare" @on-delete="onDelete"></item>
             <el-divider class="dialog_divider"></el-divider>
             <span slot="footer" class="dialog-footer">
-                <el-button class="dialog_button" @click="show = false">Close</el-button>
+                <el-button class="dialog_button" @click="clear">Close</el-button>
             </span>
         </el-dialog>
     </div>
@@ -303,18 +303,24 @@
                             message: error.message,
                         });
                     });
+            },
+
+            clear: function() {
+                this.show = false;
+                this.commit = {
+                    seq: "",
+                    title: "",
+                    size: "",
+                    time: "",
+                    expire: "",
+                    list: []
+                };
             }
         }
     }
 </script>
 
-<style>
-    .list {
-        margin: 0 30px;
-    }
-    .filter-form {
-        margin-bottom: 20px;
-    }
+<style lang="less">
     .el-form-item__label {
         font-size: small;
     }
@@ -326,62 +332,6 @@
     }
     .el-date-editor.el-input {
         width: 100%;
-    }
-
-    .search-button {
-        color: #303133;
-        background: #ffffff;
-        margin: 6px 12px 6px 0;
-    }
-    .search-button:hover {
-        color: #303133;
-        background: #ffffff;
-        margin: 6px 12px 6px 0;
-    }
-    .search-button:focus {
-        color: #303133;
-        background: #ffffff;
-        margin: 6px 12px 6px 0;
-    }
-
-    .tag {
-        margin: 6px 12px 6px 0;
-        background-color: white;
-        border-color: #DCDFE6;
-        color: #303133;
-        height: 28px;
-        line-height: 25px;
-    }
-    .tag:hover {
-        cursor: pointer;
-    }
-    .tag-img {
-        background-color: #f0ad4e;
-        color: white;
-    }
-    .tag-mov {
-        background-color: #d9534f;
-        color: white;
-    }
-    .tag-audio {
-        background-color: #b257d9;
-        color: white;
-    }
-    .tag-pdf {
-        background-color: #e1692a;
-        color: white;
-    }
-    .tag-doc {
-        background-color: #337ab7;
-        color: white;
-    }
-    .tag-zip {
-        background-color: #5cb85c;
-        color: white;
-    }
-    .tag-other {
-        background-color: #d2d2d2;
-        color: white;
     }
 
     @media(max-width: 768px) {

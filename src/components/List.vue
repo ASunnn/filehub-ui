@@ -33,7 +33,6 @@
 
         methods: {
             onClick: function(data) {
-                console.log("click");
                 if (data.linkable)
                     this.$emit("on-item-click", data);
             },
@@ -51,40 +50,42 @@
     }
 </script>
 
-<style>
-    .list .list-item {
-        padding: 10px;
-        border-radius: 6px;
-        transition: background 0.2s;
-    }
-    .list .list-item:hover {
-        background: #EBEEF5;
-    }
-    .list .link {
-        cursor: pointer;
-    }
-    .list .avatar {
-        margin-right: 15px;
-        float: left;
-    }
-    .list .title {
-        color: #303133;
-        font-size: medium;
-    }
-    .list .left {
-        font-size: x-small;
-        color: #606266;
-    }
-    .list .right {
-        font-size: x-small;
-        float: right;
-        color: #606266;
-    }
-    .list .el-divider--horizontal {
-        margin: 2px 0;
-    }
+<style lang="less">
+    .list {
+        .list-item {
+            padding: 10px;
+            border-radius: 6px;
+            transition: background 0.2s;
+            &:hover {
+                background: #EBEEF5;
+            }
+        }
+        .link {
+            cursor: pointer;
+        }
+        .avatar {
+            margin-right: 15px;
+            float: left;
+        }
+        .title {
+            color: #303133;
+            font-size: medium;
+        }
+        .left {
+            font-size: x-small;
+            color: #606266;
+        }
+        .right {
+            font-size: x-small;
+            float: right;
+            color: #606266;
+        }
+        .el-divider--horizontal {
+            margin: 2px 0;
+        }
 
-    .list .el-pagination {
-        margin-top: 20px;
+        .el-pagination {
+            margin-top: 20px;
+        }
     }
 </style>

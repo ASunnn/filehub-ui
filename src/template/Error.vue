@@ -9,8 +9,8 @@
             <el-main>
                 <el-col :md="{span: 20, offset: 2}" :sm="24">
                     <div>
-                        <h1 class="h1">404</h1>
-                        <h2 class="h2">Not Found</h2>
+                        <h1>404</h1>
+                        <h2>Not Found</h2>
                     </div>
                 </el-col>
             </el-main>
@@ -24,5 +24,4 @@
 </script>
 
 <style>
-
 </style>
