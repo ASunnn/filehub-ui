@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="share">
         <template v-if="!show">
             <div class="blank" ref="content"></div>
         </template>
@@ -83,5 +83,10 @@
     }
 </script>
 
-<style>
+<style lang="less">
+    .share {
+        .el-table__row {
+            cursor: pointer;
+        }
+    }
 </style>

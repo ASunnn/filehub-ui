@@ -116,7 +116,7 @@
 
             buildCommitList: function(data) {
                 if (data.list == null) {
-                    return;
+                    data.list = [];
                 }
 
                 let list = [];
