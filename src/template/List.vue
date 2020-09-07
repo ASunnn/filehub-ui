@@ -297,6 +297,7 @@
                                 type: "warning"
                             });
                         }
+                        window.location.reload();
                     })
                     .catch(function(error) {
                         self.$notify.error({

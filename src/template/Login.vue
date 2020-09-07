@@ -27,7 +27,7 @@
                 .then(function (response) {
                     let data = response.data;
                     if (data.code === 0)
-                        window.location.href = "/home";
+                        self.$router.push(path + "/home");
                     else {
                         self.disable = false;
                     }
