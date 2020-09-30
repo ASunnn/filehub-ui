@@ -61,10 +61,6 @@
             }
         },
 
-        beforeMount: function() {
-            const self = this;
-        },
-
         methods: {
             refreshFiles: function(file, fileList) {
                 this.files = fileList;
