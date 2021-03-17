@@ -36,7 +36,7 @@
                 :show-close="false"
                 :close-on-press-escape="false"
                 ref="dialog">
-            <item :data="commit" :tool="true" @on-share="onShare" @on-delete="onDelete"></item>
+            <item :data="commit" :is-share="false" @on-share="onShare" @on-delete="onDelete"></item>
             <el-divider class="dialog_divider"></el-divider>
             <span slot="footer" class="dialog-footer">
                 <el-button class="dialog_button" @click="clear">Close</el-button>

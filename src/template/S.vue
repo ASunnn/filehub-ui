@@ -9,7 +9,7 @@
             <el-main>
                 <el-col :md="{span: 20, offset: 2}" :sm="24">
                     <template v-if="show">
-                        <item :data="data" :tool="false"></item>
+                        <item :data="data" :is-share="true"></item>
                     </template>
                     <template v-else>
                         <div class="blank" ref="content"></div>

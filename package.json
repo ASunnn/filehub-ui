@@ -1,6 +1,6 @@
 {
-    "name": "FileHub",
-    "version": "0.1.0",
+    "name": "filehub",
+    "version": "1.0.3",
     "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",

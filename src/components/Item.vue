@@ -3,7 +3,7 @@
         <el-col class="head" :span="24">
             <h2 class="title">{{data.title}}</h2>
             <p class="size">{{data.size}}</p>
-            <template v-if="tool">
+            <template v-if="!isShare">
                 <div class="tool">
                     <a id="delete" @click="onDelete">Delete</a>
                 </div>
@@ -31,10 +31,10 @@
             </el-table-column>
             <el-table-column width="120px">
                 <template slot="header" slot-scope="scope">
-                    <a :href="base + '/files/download/' + data.seq">Download All</a>
+                    <a :href="base + downloadPath() + data.seq">Download All</a>
                 </template>
                 <template slot-scope="scope">
-                    <a :href="base + '/files/download/' + data.seq + '/' + scope.row.name" >download</a>
+                    <a :href="base + downloadPath() + data.seq + '/' + scope.row.name" >download</a>
                 </template>
             </el-table-column>
         </el-table>
@@ -45,7 +45,7 @@
     export default {
         name: "Item",
 
-        props: ["data", "tool"],
+        props: ["data", "isShare"],
 
         data() {
             return {
@@ -54,6 +54,10 @@
         },
 
         methods: {
+            downloadPath: function () {
+                return this.isShare ? "/share/download/" : "/files/download/";
+            },
+
             onShare: function() {
                 this.$emit("on-share", this.data);
             },
